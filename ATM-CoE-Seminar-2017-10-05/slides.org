@@ -103,12 +103,17 @@ research projects and teaching!
 - sofware installs on CSC's supercomputers and local workstations (EC-Earth,
   MPI-ESM, ECHAM, PALM, ASAM, FLEXPART, Metview, cdo, ncl, netcdf, grib-api,
   ...)
-- workflows and scripting
+- workflow optimization, efficient resource usage, scripting
+
+#+BEGIN_NOTES
+The usual CSC software support type of things.
+#+END_NOTES
 
 ** Mentoring, CoE & CSC collaboration
 
 - not only solving problems in computational work, but also teaching how to
   solve them
+- reproducible research
 - active participation in research and teaching in Kumpula Campus
 
 #+BEGIN_NOTES
@@ -125,6 +130,7 @@ computational work, and 3) "fix it."
 - Algorithm support, programming support
 - [[https://github.com/mikarant/ozo][Fortran code in GitHub]]
 - Results published, [[https://www.google.fi/search?q=r%C3%A4is%C3%A4nen+generalized+omega+equation&client=ubuntu&hs=CUn&source=lnms&tbm=isch&sa=X&ved=0ahUKEwjTu4OUmdfWAhWDK5oKHfIpCp4Q_AUICigB&biw=1375&bih=810][Google picture search]]
+- Mika Rantanen, Jouni Räisänen, Victoria Sinclair, ...
 
 #+BEGIN_NOTES
 Super nice project.
@@ -132,21 +138,38 @@ Super nice project.
 
 ** Generalized Omega equation solver
 
-- proof of concept implementation (second re-write of the code)
-- parallel I/O with [[http://www.unidata.ucar.edu/software/netcdf/][Netcdf4]], [[https://www.mcs.anl.gov/petsc/][PETSc]] parallel solvers
+- proof of concept implementation (third re-write of the code)
+- parallel I/O with [[http://www.unidata.ucar.edu/software/netcdf/][Netcdf4]], parallel [[https://www.mcs.anl.gov/petsc/][PETSc]] solvers
 - [[https://github.com/jlento/cozoc][C code in GitHub]]
-  1. Discretize [[http://journals.ametsoc.org/doi/pdf/10.1175/1520-0493%281997%29125%3C1577%3AHTDUAG%3E2.0.CO%3B2][differential equations]], using symbolic computation
-  2. Solve discretized equations using numerical subroutine libraries
+  1. [[http://journals.ametsoc.org/doi/pdf/10.1175/1520-0493%281997%29125%3C1577%3AHTDUAG%3E2.0.CO%3B2][Differential equations]] discretized using symbolic computation
+  2. Solver from numerical subroutine library
 
 #+BEGIN_NOTES
-Not really used, but was fun to write.
+Not really used, yet. Was fun to write.
 #+END_NOTES
 
-** EC-Earth ESM with Aeorosol physics in CMIP6
+** Ensemble prediction system
+
+- consultation in a complex workflow management framework
+- [[https://github.com/jlento/makegraph][Makegraph in GitHub]]
+- with Pirkka Ollinaho, Heikki Järvinen, Madeleine Ekblom, Lauri Tuppi, ...
+
+#+BEGIN_NOTES
+This is a hard task. The best that I could do was to emphasize the importance of
+picturing -- literally -- the workflow dependency graph (DAG).
+#+END_NOTES
+
+** EC-Earth ESM with aeorosol physics in CMIP6
 
 - huge (>1M LoC), coupled Earth system model, [[http://www.ec-earth.org/][EC-Earth]]
 - just to get it running is a big task, let alone running it efficiently
 - data publishing, [[https://esgf.llnl.gov/][ESGF]]
+- Risto Makkonen, Jukka-Pekka Keskinen, ...
+
+#+BEGIN_NOTES
+This is work in progress. I'm confident that this is doable, but the amount of
+work is horrible.
+#+END_NOTES
 
 * Slogans
 
