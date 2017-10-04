@@ -1,0 +1,173 @@
+#+TITLE: Support for computational work in CoE ATM
+#+AUTHOR: Juha Lento (CSC)
+#+REVEAL_ROOT: ../reveal.js
+#+OPTIONS: toc:nil num:nil
+
+#+BEGIN_NOTES
+CSC provides extensive support for computational work in atmospheric and Earth
+sciences! If computational work is giving you headaches or you would like to
+attack a new problem, there is help available!
+#+END_NOTES
+
+* First, thank You for your active use of CSC's services!
+
+#+BEGIN_NOTES
+Active use of CSC's services is the best service for CSC. Atmospheric and Earth
+system researchers are actively using CSC's services.
+#+END_NOTES
+
+* Big challenges in Physics --- computers and programming
+
+*Making observations and understanding them*
+
+- Quantitative observations, measurements (data)
+- Data analysis and models (equations)
+  - Simulations, testing models, making predictions
+
+#+BEGIN_NOTES
+This is kind of obvious. We are using huge databases and models to understand
+complex processes. Graph paper alone is not enough anymore. In addition to our
+skills in mathematics and physics, the efficiency and the quality of our
+research depends increasingly on our programming skills. We need to teach
+programming, too.
+#+END_NOTES
+
+* Education perspective to CSC's services
+
+** Courses organized by CSC
+
+- Short, 1-3 day courses at CSC
+  - [[https://www.csc.fi/web/training/-/linux1_sept2017][Linux 1]]
+  - [[https://www.csc.fi/web/training/-/csc-env-2017-2][Using CSC's environment efficiently]]
+  - [[https://www.csc.fi/web/training/-/python_intro_2017_2][Introduction to Python]]
+  - [[https://www.csc.fi/web/training/-/intro_fortran_2017][Fortran programming for scientific computing]]
+  - [[https://www.csc.fi/web/training/-/introduction-to-c-programmi-2][Introduction to C programming]]
+  - [[https://www.csc.fi/web/training/-/geocomputing_2017][Geocomputing usings CSC resources]]
+- Engage students early!
+- Small investment of time, potentially large benefit!
+
+** CSC's contribution in university courses
+
+- Resource provider, training accounts in supercomputers
+- Invited lectures
+
+** Notebooks (new!)
+
+- Notebooks for teaching
+  - [[https://csc.fi/iw/web/blog/post/-/blogs/notebooks-enemman-aikaa-opetuksen-ytimelle][Blog post]]
+  - [[http://notebooks.csc.fi/][Try it!]]
+
+#+BEGIN_NOTES
+This was actually reminded to me by Anton Rusanen (UH) at lunch.
+#+END_NOTES
+
+** Practical things we can do
+
+- Send the students to CSC's courses
+  - Linux 1
+  - Using CSC's environment efficiently
+- Send the students to CSC's summer school
+- Ask for mentoring support for computational work
+- Promote good software development practices
+- Improve attitudes towards computational work
+
+*What more?*
+
+#+BEGIN_NOTES
+For me, mathematics, physics, computer science, and programming, are hobbies!
+#+END_NOTES
+
+** CSC' application specialists
+
+  - Thomas Zwinger, NCoE eSTICC, glaciers, fluid dynamics
+  - Jyrki Hokkanen, visualization of scientific data
+  - Jan Åströn, particle models, glaciers
+  - Nino Runeberg, Atte Sillanpää, chemistry
+  - Seija Sirkiä, statistical analysis
+  - Kylli Ek, Eduardo Gonzales, geographical data analysis
+  - Zubair Maalick, finished his PhD in Atmospheric physics and has just joined
+    CSC
+  - Lot's of specialists at CSC, programming support 
+
+Just to name a few...
+
+#+BEGIN_NOTES
+I'm really not the only application specialist at CSC, who likes to get involved in
+research projects and teaching!
+#+END_NOTES
+
+* Computational work support for CoE ATM in particular
+
+** Software support
+
+- sofware installs on CSC's supercomputers and local workstations (EC-Earth,
+  MPI-ESM, ECHAM, PALM, ASAM, FLEXPART, Metview, cdo, ncl, netcdf, grib-api,
+  ...)
+- workflows and scripting
+
+** Mentoring, CoE & CSC collaboration
+
+- not only solving problems in computational work, but also teaching how to
+  solve them
+- active participation in research and teaching in Kumpula Campus
+
+#+BEGIN_NOTES
+I think my work is a good example of a way to improve interaction between CSC
+and university. In addition to the regular email exchange and "just fixing it",
+we sit together in front of the same screen and discuss 1) about the research
+subject, and 2) the rationale and theory behind different aspects of the
+computational work, and 3) "fix it."
+#+END_NOTES
+
+** Generalized Omega equation and Zwack-Okossi height tendencies
+
+- Small (< 10k LoC) in-house code
+- Algorithm support, programming support
+- [[https://github.com/mikarant/ozo][Fortran code in GitHub]]
+- Results published, [[https://www.google.fi/search?q=r%C3%A4is%C3%A4nen+generalized+omega+equation&client=ubuntu&hs=CUn&source=lnms&tbm=isch&sa=X&ved=0ahUKEwjTu4OUmdfWAhWDK5oKHfIpCp4Q_AUICigB&biw=1375&bih=810][Google picture search]]
+
+#+BEGIN_NOTES
+Super nice project.
+#+END_NOTES
+
+** Generalized Omega equation solver
+
+- proof of concept implementation (second re-write of the code)
+- parallel I/O with [[http://www.unidata.ucar.edu/software/netcdf/][Netcdf4]], [[https://www.mcs.anl.gov/petsc/][PETSc]] parallel solvers
+- [[https://github.com/jlento/cozoc][C code in GitHub]]
+  1. Discretize [[http://journals.ametsoc.org/doi/pdf/10.1175/1520-0493%281997%29125%3C1577%3AHTDUAG%3E2.0.CO%3B2][differential equations]], using symbolic computation
+  2. Solve discretized equations using numerical subroutine libraries
+
+#+BEGIN_NOTES
+Not really used, but was fun to write.
+#+END_NOTES
+
+** EC-Earth ESM with Aeorosol physics in CMIP6
+
+- huge (>1M LoC), coupled Earth system model, [[http://www.ec-earth.org/][EC-Earth]]
+- just to get it running is a big task, let alone running it efficiently
+- data publishing, [[https://esgf.llnl.gov/][ESGF]]
+
+* Slogans
+
+#+BEGIN_NOTES
+Obviously, if it is computers related, Google it...
+#+END_NOTES
+
+** Don't be Computer, be Programmer!
+
+#+BEGIN_NOTES
+If you find yourself doing something repeatedly, stop, and program the computer
+to do it for you.
+#+END_NOTES
+
+** Don't just sit there, do something!
+
+#+BEGIN_NOTES
+Don't wait for file I/O, file transfers, execution in development cycle,
+response from CSC, etc...
+#+END_NOTES
+
+* How to get support
+
+*servicedesk@csc.fi* *juha.lento@csc.fi* *Physicum B226*
