@@ -15,7 +15,8 @@
 - Helping researchers to find the right CSC's computing resources,
   courses and application support
 
-- Helping to choose better approaches in computational work in general
+- Helping to choose better approaches in the computational work in
+  general
 
 
 #+BEGIN_NOTES
@@ -56,8 +57,7 @@
 - [[https://github.com/mikarant/ozo][Fortran code in GitHub]]
 
 - Results published,
-  [[https://www.google.fi/search?q=r%C3%A4is%C3%A4nen+generalized+omega+equation&client=ubuntu&hs=CUn&source=lnms&tbm=isch&sa=X&ved=0ahUKEwjTu4OUmdfWAhWDK5oKHfIpCp4Q_AUICigB&biw=1375&bih=810][Google
-  picture search]]
+  [[https://www.google.fi/search?q=r%C3%A4is%C3%A4nen+generalized+omega+equation&client=ubuntu&hs=CUn&source=lnms&tbm=isch&sa=X&ved=0ahUKEwjTu4OUmdfWAhWDK5oKHfIpCp4Q_AUICigB&biw=1375&bih=810][Google picture search]]
 
 - With Mika Rantanen, Jouni Räisänen, Victoria Sinclair, ...
 
@@ -76,8 +76,7 @@ Super nice project.
 
 - General approach
 
-  1. [[http://journals.ametsoc.org/doi/pdf/10.1175/1520-0493%281997%29125%3C1577%3AHTDUAG%3E2.0.CO%3B2][Differential
-  equations]] discretized using symbolic computation
+  1. [[http://journals.ametsoc.org/doi/pdf/10.1175/1520-0493%281997%29125%3C1577%3AHTDUAG%3E2.0.CO%3B2][Differential equations]] discretized using symbolic computation
 
   2. Solver from numerical subroutine library
 
