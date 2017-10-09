@@ -56,7 +56,7 @@
 
 - [[https://github.com/mikarant/ozo][Fortran code in GitHub]]
 
-- Results published,
+- [[https://www.geosci-model-dev.net/10/827/2017/gmd-10-827-2017.pdf][Published paper]],
   [[https://www.google.fi/search?q=r%C3%A4is%C3%A4nen+generalized+omega+equation&client=ubuntu&hs=CUn&source=lnms&tbm=isch&sa=X&ved=0ahUKEwjTu4OUmdfWAhWDK5oKHfIpCp4Q_AUICigB&biw=1375&bih=810][Google picture search]]
 
 - With Mika Rantanen, Jouni Räisänen, Victoria Sinclair, ...
@@ -125,5 +125,5 @@ work is horrible.
 
 - We should increase direct on-site work
 
-- Light version: CSC's specialists could participate to their
-  favourite groups' meetings as "computing godparents"
+- CSC's specialists could participate to their favourite groups'
+  meetings as "computing godparents?"
