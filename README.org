@@ -6,23 +6,17 @@
 
 2. Find line with ~;; org~ in file *~/.spacemacs* and replace it with
 
-#+BEGIN_SRC emacs-lisp
-      (org :variables org-enable-reveal-js-support t)
-#+END_SRC
+      ~(org :variables org-enable-reveal-js-support t)~
 
 3. Clone [[https://github.com/hakimel/reveal.js][Reveal.js]] to the presentation root. If cloning this presentation
    repository, clone with
 
-#+BEGIN_SRC sh
-      git clone --recursive https://github.com/jlento/presentations.git
-#+END_SRC
+      ~git clone --recursive https://github.com/jlento/presentations.git~
 
    The location of `reveal.js` root directory should match the line
 
-#+BEGIN_SRC org
-      #+REVEAL_ROOT: ../reveal.js
-#+END_SRC
+      ~#+REVEAL_ROOT: ../reveal.js~
 
    in the `.org` document.
 
-4. Export from emacs with `C-c C-e R B`, for example.
+4. Export from emacs with *C-c C-e R B*, for example.
