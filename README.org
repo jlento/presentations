@@ -3,12 +3,20 @@
 ** Export to Reveal.js slide show from Emacs Org-mode
 
 1. Use curated emacs configuration [[spacemacs.org][spacemacs]]
-2. Find line with `;; org` and replace it with
+
+2. Find line with `;; org` in file `~/.spacemacs` and replace it with
+
       (org :variables org-enable-reveal-js-support t)
+
 3. Clone [[https://github.com/hakimel/reveal.js][Reveal.js]] to the presentation root. If cloning this presentation
    repository, clone with
+
       git clone --recursive https://github.com/jlento/presentations.git
+
    The location of `reveal.js` root directory should match the line
+
       #+REVEAL_ROOT: ../reveal.js
+
    in the `.org` document.
+
 4. Export from emacs with `C-c C-e R B`, for example.
