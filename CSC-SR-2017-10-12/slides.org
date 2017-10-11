@@ -3,17 +3,8 @@
 #+EMAIL: juha.lento@csc.fi
 #+DATE: 2017-10-12
 #+REVEAL_ROOT: ../reveal.js
-#+REVEAL_EXTRA_CSS: custom.css
-#+REVEAL_TRANS: none
-#+REVEAL_MARGIN: 0.1
-#+REVEAL_INIT_SCRIPT: controls: false,
-#+REVEAL_INIT_SCRIPT: progress: false,
-#+REVEAL_INIT_SCRIPT: slideNumber: false,
-#+REVEAL_INIT_SCRIPT: center: false,
-#+REVEAL_INIT_SCRIPT: width: 1920,
-#+REVEAL_INIT_SCRIPT: height: 1080
-#+REVEAL_EXTRA_JS: { src: 'custom.js' }
 #+OPTIONS: toc:nil num:nil
+#+INCLUDE: "custom.org"
 
 * On-site work in general
 
