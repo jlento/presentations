@@ -4,16 +4,16 @@
 #+OPTIONS: toc:nil num:nil
 
 
-* Interaction
+* On-site work in general
 
 
-** Social interactions
+** Social interaction
 
 - Participation in seminars ,workshops, group meetings, coffee breaks,
   lunches, etc.
 
 - Helping researchers to find the right CSC's computing resources,
-  courses and application support
+  courses and application support persons
 
 - Helping to choose better approaches in the computational work in
   general
@@ -123,7 +123,7 @@ work is horrible.
 
 - Do I recommend this kind of work? - Yes!
 
-- We should increase direct on-site work
+- We should increase on-site work
 
-- CSC's specialists could participate to their favourite groups'
+- CSC's specialists could participate their favourite groups'
   meetings as "computing godparents?"
