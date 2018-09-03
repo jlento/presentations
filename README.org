@@ -1,5 +1,22 @@
 * presentations
 
+** Cloning this repository
+
+Clone this repository and the RevealJS submodule with
+
+#+BEGIN_SRC bash
+git clone --recurse-submodules https://github.com/jlento/presentations.git
+#+END_SRC
+
+** Updating this repository
+
+Update the repository and the RevealJS submodule with commands
+
+#+BEGIN_SRC bash
+git pull
+git submodule update --remote
+#+END_SRC
+
 ** Export to Reveal.js slide show from Emacs Org-mode
 
 1. Use curated emacs configuration [[spacemacs.org][spacemacs]]
