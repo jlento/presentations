@@ -1,22 +1,10 @@
 --
 title: Presentations
 --
-<!doctype html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <title>Presentations</title>
-        <!-- <link rel="stylesheet" href="css/styles.css?v=1.0"> -->
-    </head>
-
-    <body>
-        <ul>
-            {% for p in site.pages %}
-            <li>
-                <a href="{{ p.url }}">{{ p.title }}</a>
-            </li>
-            {% endfor %}
-        </ul>
-        <!-- <script src="js/scripts.js"></script> -->
-    </body>
-</html>
+<ul>
+    {% for p in site.pages %}
+    <li>
+        <a href="{{ p.url }}">{{ p.title }}</a>
+    </li>
+    {% endfor %}
+</ul>
