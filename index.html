@@ -4,7 +4,7 @@ title: Presentations
 <ul>
     {% for p in site.pages %}
     <li>
-        <a href="/presentations{{ p.url }}">{{ p.title }}</a>
+        <a href="{{ p.url | relative_url }}">{{ p.title }}</a>
     </li>
     {% endfor %}
 </ul>
