@@ -1,4 +1,6 @@
-# Preview site and slides before pushing to GitHub
+---
+title: Preview site and slides before pushing to GitHub
+---
 
 GitHub Pages uses Jekyll site generator. It can be run locally to preview site
 before pushing to GitHub.
@@ -16,5 +18,4 @@ bundle exec jekyll serve &
 ```
 
 Me: Remember to push Homebrew path /usr/local/bin to the top of PATH on macOS :)
-
 

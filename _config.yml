@@ -1,2 +1,14 @@
 plugins:
   - jekyll-sitemap
+
+collections:
+  docs:
+    output: true
+
+defaults:
+  -
+    scope:
+      path: "_docs"
+    values:
+      layout: "default"
+
