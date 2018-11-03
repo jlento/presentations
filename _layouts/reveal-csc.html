@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+
+{% if page.title %}
+        <title>{{ page.title }}</title>
+{% endif %}
+
+{% if page.author %}
+        <meta name="author" content="{{ page.author }}" />
+{% endif %}
+
+{% if page.description %}
+        <meta name="description" content="{{ page.description }}" />
+{% endif %}
+
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+        <meta name="viewport"
+              content="width=device-width, initial-scale=1.0,
+                    maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+        <link rel="stylesheet" href="{{ "/reveal.js/css/reveal.css" | relative_url }}"/>
+             <link rel="stylesheet" href="{{ "/css/csc.css" | relative_url }}" id="theme">
+
+        <!-- Code syntax highlighting -->
+        <link rel="stylesheet" href="{{ "/reveal.js/lib/css/zenburn.css" | relative_url }}"/>
+
+        <!-- Printing and PDF exports -->
+        <script>
+         var link = document.createElement( 'link' );
+         link.rel = 'stylesheet';
+         link.type = 'text/css';
+         link.href = window.location.search.match( /print-pdf/gi )
+                   ? '{{ "/reveal.js/css/print/pdf.css" | relative_url }}'
+                   : '{{ "/reveal.js/css/print/paper.css" | relative_url }}';
+         document.getElementsByTagName( 'head' )[0].appendChild( link );
+        </script>
+
+        <link rel="apple-touch-icon" href="{{ "/apple-touch-icon.png" | relative_url }}" />
+
+        <link rel="canonical"
+              href="{{ page.url | replace:'index.html','' | relative_url | prepend: site.url }}">
+
+        <!--[if lt IE 9]>
+            <script src="lib/js/html5shiv.js"></script>
+        <![endif]-->
+
+    </head>
+
+    <body>
+
+        <div class="reveal">
+            <div class="slides">
+
+
+                <!-- Title slide -->
+
+{% if page.titleslide %}
+                <section class="title-slide"
+                         data-background="{{ "/img/title-en.png" | relative_url }}"
+                         data-background-size="contain">
+                    <h1>{{ page.title }}</h1>
+                    <p>{{ page.author }}<p>
+                    <p>CSC Training, {{ page.date }}<p>
+                </section>
+{% endif %}
+
+                <section data-markdown
+                         data-separator="^\n====*\n$"
+                         data-separator-vertical="^\n----*\n$"
+                         data-notes="^Note:"
+                         data-background-image="{{ "/img/white.png" | relative_url }}"
+                         data-background-size="contain">
+					          <script type="text/template">
+{{ content }}
+					          </script>
+				        </section>
+            </div>
+        </div>
+
+        <script src="{{ "/reveal.js/lib/js/head.min.js" | relative_url }}"></script>
+        <script src="{{ "/reveal.js/js/reveal.js" | relative_url }}"></script>
+        <script>
+         // Full list of configuration options available at:
+         // https://github.com/hakimel/reveal.js#configuration
+         Reveal.initialize({
+             controls: false,
+             history: true,
+             center: false,
+             progress: false,
+             transition: 'none', // none/fade/slide/convex/concave/zoom
+             backgroundTransition: 'none', // none/fade/slide/convex/concave/zoo
+             width: 1920,
+             height: 1080,
+
+             // Optional reveal.js plugins
+             dependencies: [
+                 { src: '{{ "/reveal.js/lib/js/classList.js" | relative_url }}',
+                   condition: function() { return !document.body.classList; } },
+                 { src: '{{ "/reveal.js/plugin/markdown/marked.js" | relative_url }}',
+                   condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                 { src: '{{ "/reveal.js/plugin/markdown/markdown.js" | relative_url }}',
+                   condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                 { src: '{{ "/reveal.js/plugin/highlight/highlight.js" | relative_url }}', async: true,
+                   condition: function() { return !!document.querySelector( 'pre code' ); },
+                   callback: function() { hljs.initHighlightingOnLoad(); } },
+                 { src: '{{ "/reveal.js/plugin/zoom-js/zoom.js" | relative_url }}', async: true },
+                 { src: '{{ "/reveal.js/plugin/notes/notes.js" | relative_url }}', async: true }
+             ]
+         });
+
+        </script>
+
+    </body>
+</html>
