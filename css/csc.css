@@ -27,9 +27,9 @@
 :root {
   --xsize:  1920px;
   --ysize:  1080px;
-  --xmargin: 192px;
-  --ymargin:  84px;
-  --fontsize: 36px;
+  --xmargin: 150px;
+  --ymargin: 120px;
+  --fontsize: 44px;
 }
 
 /*********************************************
@@ -53,7 +53,7 @@ body {
 .reveal .slides > section > section {
   padding:     0;
 }
-/*
+
 .reveal h1,
 .reveal h2,
 .reveal h3,
@@ -65,7 +65,7 @@ body {
 .reveal video {
   margin-left:  var(--xmargin);
   margin-right: var(--xmargin);
-} */
+}
 .reveal .slides > section:before {
   content:    "";
   display:    block;
@@ -86,7 +86,7 @@ body {
 }
 
 .reveal div.title-box h1 {
-    font-size: 200%;
+    font-size: 72px;
     color: white;
     width: auto;
     height: auto;
@@ -95,10 +95,11 @@ body {
 }
 
 .reveal div.title-box p {
-    font-size: 100%;
+    font-size: 36px;
     font-weight: normal;
     color: white;
-    padding-left: 0;
+    padding: 0;
+    margin: 0;
 }
 
 .reveal h1 {
@@ -107,13 +108,16 @@ body {
     background-color: var(--csc-magenta);
     display: flex;
     align-items: center;
+    margin: 0;
     padding-left: var(--xmargin);
     font-size: 150%;
     color: white;
 }
 
 .reveal h2 {
-    font-size: 1.2em;
+    font-size: 150%;
+    margin-top: var(--ymargin);
+    padding-bottom: 1em;
     color:     var(--csc-teal);
 }
 
@@ -138,7 +142,10 @@ body {
     font-weight: bold;
 }
 
-
+.reveal p {
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+}
 
 
 
