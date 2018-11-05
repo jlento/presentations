@@ -27,9 +27,9 @@
 :root {
   --xsize:  1920px;
   --ysize:  1080px;
-  --xmargin:  74px;
+  --xmargin: 192px;
   --ymargin:  84px;
-  --fontsize: 50px;
+  --fontsize: 36px;
 }
 
 /*********************************************
@@ -53,6 +53,7 @@ body {
 .reveal .slides > section > section {
   padding:     0;
 }
+/*
 .reveal h1,
 .reveal h2,
 .reveal h3,
@@ -64,37 +65,87 @@ body {
 .reveal video {
   margin-left:  var(--xmargin);
   margin-right: var(--xmargin);
-}
+} */
 .reveal .slides > section:before {
   content:    "";
   display:    block;
-  margin-top: var(--ymargin);
+/*  margin-top: var(--ymargin); */
 }
 
 /*********************************************
  * HEADERS
  *********************************************/
-.reveal h1, .reveal h2, .reveal h3 {
-  font-weight: normal;
-  line-height: 1.1;
-  text-align:  left;
-  font-weight: bold;
+div.title-box {
+    margin-top: 360px;
+    margin-left: 457px;
+    height: 445px;
+    padding-top: 100px;
+    padding-bottom: 50px;
+    padding-left: 100px;
+    padding-right: 100px;
 }
+
+div.title-box h1 {
+    font-size: 200%;
+    color: white;
+    width: auto;
+    height: auto;
+    padding-left: 0;
+    padding-bottom: 2rem;
+}
+
+div.title-box p {
+    font-size: 100%;
+    font-weight: normal;
+    color: white;
+    padding-left: 0;
+}
+
 .reveal h1 {
-  font-size: 1.2em;
-  color:     var(--csc-teal);
+    width: calc(var(--xsize) - var(--xmargin));
+    height: calc(0.3 * var(--ysize));
+    background-color: var(--csc-magenta);
+    display: flex;
+    align-items: center;
+    padding-left: var(--xmargin);
+    font-size: 150%;
+    color: white;
 }
+
 .reveal h2 {
+    font-size: 1.2em;
+    color:     var(--csc-teal);
+}
+
+.reveal h3 {
   font-size: 1.1em;
   padding-top: 1ex;
 }
-.reveal h3 {
+
+.reveal h4 {
   font-size:   1em;
   padding-top: 1ex;
 }
+
+
+
+
+
+.reveal h1, .reveal h2, .reveal h3 {
+    font-weight: normal;
+    line-height: 1.1;
+    text-align:  left;
+    font-weight: bold;
+}
+
+
+
+
+
+/*
 .reveal .slides > section h1:first-child {
   padding-bottom: 1.7em;
-}
+}*/
 .reveal .slides > section h2:first-child,
 .reveal .slides > section h3:first-child,
 .reveal .slides > section h1:first-child + h2,
@@ -378,23 +429,28 @@ body {
 /*********************************************
  * CSC SPECIAL SLIDES
  *********************************************/
+
+/*
 .reveal .title-slide h1, .reveal .title-slide p {
   margin-left: calc(0.291 * var(--xsize));
   text-align:  left;
   color:       #ffffff;
 }
+
 .reveal .slides > section.title-slide h1:first-child {
   padding-bottom: 1ex;
-}
+
 .reveal .title-slide h1 {
   margin-top:  calc(0.412 * var(--ysize));
   font-size:   1.4em;
   font-weight: bold;
   line-height: 1.2;
 }
+
 .reveal .title-slide p {
   font-size: 0.6em;
 }
+
 
 .reveal .author-slide h1,
 .reveal .author-slide p,
@@ -422,6 +478,8 @@ body {
   left:  calc(0.073 * var(--xsize));
   border: 0;
 }
+
+*/
 
 /*********************************************
  * PDF printing
