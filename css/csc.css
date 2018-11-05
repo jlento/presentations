@@ -179,7 +179,7 @@ body {
   font-weight: bold;
 }
 .reveal em {
-  font-weight: bold;
+  font-style: italic;
 }
 .reveal sup {
   vertical-align: super;
