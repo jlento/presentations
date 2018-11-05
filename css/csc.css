@@ -75,7 +75,7 @@ body {
 /*********************************************
  * HEADERS
  *********************************************/
-div.title-box {
+.reveal div.title-box {
     margin-top: 360px;
     margin-left: 457px;
     height: 445px;
@@ -85,7 +85,7 @@ div.title-box {
     padding-right: 100px;
 }
 
-div.title-box h1 {
+.reveal div.title-box h1 {
     font-size: 200%;
     color: white;
     width: auto;
@@ -94,7 +94,7 @@ div.title-box h1 {
     padding-bottom: 2rem;
 }
 
-div.title-box p {
+.reveal div.title-box p {
     font-size: 100%;
     font-weight: normal;
     color: white;
