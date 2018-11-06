@@ -187,6 +187,7 @@ body {
 .reveal sub {
   vertical-align: sub;
 }
+
 .reveal small {
   display: inline-block;
   font-size: 0.6em;
