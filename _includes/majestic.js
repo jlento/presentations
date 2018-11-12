@@ -1,14 +1,14 @@
 var currentSlide = 0;
+const splitBefore = "H2";
 
 function init() {
-        <!-- Splits elements into divs (slides) before h2 elements -->
-        var body = document.body;
+    var body = document.body;
     var islide = currentSlide;
     body.insertBefore(document.createElement("div"),
                       body.childNodes[0]);
     body.childNodes[0].style.display = "none";
     while (body.childNodes.length > islide + 1) {
-        if (body.childNodes[islide + 1].tagName === "H2") {
+        if (body.childNodes[islide + 1].tagName === splitBefore) {
             body.insertBefore(body.childNodes[0].cloneNode(false),
                               body.childNodes[islide].nextSibling);
             islide++;

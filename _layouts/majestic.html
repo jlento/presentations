@@ -5,16 +5,19 @@
 <html lang="en">
 
     <head>
+
         <style>
-         {% majestic-csc.css %}
+{% include majestic-csc.css %}
         </style>
+
         <script>
-         {% include majestic.js %}
+{% include majestic.js %}
         </script>
+
     </head>
 
     <body style="display: none;" onload="init();" onkeydown="change(event);">
-        {{ content }}
+{{ content }}
     </body>
 
 </html>
