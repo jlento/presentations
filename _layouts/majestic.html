@@ -16,7 +16,17 @@
 
     </head>
 
-    <body style="display: none;" onload="init();" onkeydown="change(event);">
+    <body style="display: none;"
+          onload="init();"
+          onkeydown="change(event);"
+          onresize="resizeRem();">
+{% if page.titleslide %}
+        <div class="title-box">
+            <h1>{{ page.title }}</h1>
+            <p>{{ page.author }}<p>
+            <p>CSC Training, {{ page.presentation-date }}<p>
+        </div>
+{% endif %}
 {{ content }}
     </body>
 
