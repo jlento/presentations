@@ -1,22 +1,16 @@
 <!doctype html>
 
-<!-- Minimalistic slideshow engine
-
-          3. On body.onkeypress change the display styles...
-
--->
+<!-- Minimalistic slideshow -->
 
 <html lang="en">
 
     <head>
-
         <style>
+         {% majestic-csc.css %}
         </style>
-
         <script>
          {% include majestic.js %}
         </script>
-
     </head>
 
     <body style="display: none;" onload="init();" onkeydown="change(event);">
