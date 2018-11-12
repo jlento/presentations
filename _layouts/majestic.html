@@ -1,0 +1,51 @@
+<!doctype html>
+
+<!-- Minimalistic slideshow engine
+
+          3. On body.onkeypress change the display styles...
+
+-->
+
+<html lang="en">
+
+    <head>
+
+        <style>
+        </style>
+
+        <script>
+
+         function init() {
+             <!--
+             Put body elements into divs (slides). Split before h2 elements.
+             -->
+
+             var body = document.body;
+             var islide = 0;
+
+             body.insertBefore(document.createElement("div"),
+                               body.childNodes[0]);
+
+             while (body.childNodes.length > islide + 1) {
+                 if (body.childNodes[islide + 1].tagName === "H2") {
+                     body.insertBefore(body.childNodes[0].cloneNode(false),
+                                       body.childNodes[islide].nextSibling);
+                     islide++;
+                 }
+                 body.childNodes[islide]
+                     .appendChild(body.childNodes[islide + 1]);
+             }
+
+             body.style.display = "block";
+
+         }
+
+        </script>
+
+    </head>
+
+    <body style="display: none;" onload="init();" onkeypress="change();">
+        {{ content }}
+    </body>
+
+</html>
