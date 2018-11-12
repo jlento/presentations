@@ -2,7 +2,7 @@ var currentSlide = 0;
 
 function resizeRem() {
     document.documentElement.style.fontSize =
-        document.body.firstChild.offsetWidth/80 + "px";
+        document.body.childNodes[currentSlide].offsetWidth/80 + "px";
 }
 
 function hide(element) {
