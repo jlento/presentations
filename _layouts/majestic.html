@@ -5,15 +5,8 @@
 <html lang="en">
 
     <head>
-
-        <style>
-{% include majestic-csc.css %}
-        </style>
-
-        <script>
-{% include majestic.js %}
-        </script>
-
+        <link rel="stylesheet" href="{{ "/css/majestic-csc.css" | relative_url }}"/>
+        <script src="{{ "/js/majestic.js" | relative_url }}"></script>
     </head>
 
     <body style="display: none;"
@@ -21,15 +14,23 @@
           onkeydown="change(event);"
           onresize="resizeRem();">
 
-{% if page.titleslide %}
-        <div class="title-box">
-            <h1>{{ page.title }}</h1>
-            <p>{{ page.author }}<p>
-            <p>CSC Training, {{ page.presentation-date }}<p>
+        {% if page.titleslide %}
+        <div class="title-slide">
+            <div class="title-box">
+                <div>
+                    <h1>
+                        {{ page.title }}
+                    </h1>
+                    <p>
+                        {{ page.author }}</br>
+                        CSC Training, {{ page.presentation-date }}
+                    </p>
+                </div>
+            </div>
         </div>
-{% endif %}
+        {% endif %}
 
-{{ content }}
+        {{ content }}
 
     </body>
 
