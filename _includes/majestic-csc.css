@@ -1,0 +1,40 @@
+---
+---
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+:root {
+    --csc-magenta:   #830051;
+    --csc-teal:      #006778;
+    --csc-grey:      #5e6a71;
+    --csc-green:     #7dc242;
+    --csc-orange:    #ff5800;
+    --csc-purple:    #ea1d77;
+    --csc-turquoise: #00c7b2;
+    --csc-dark-blue: #002f5f;
+    --csc-blue:      #0082bb;
+}
+
+html {
+    font-family: "Source Sans Pro", Helvetica, sans-serif;
+}
+
+body {
+    background-color: #cacaca;
+    margin: 0;
+}
+
+div {
+    margin: auto;
+    width: 100vw;
+    height: 100vh;
+    max-width: calc(100vh / 0.5625);
+    max-height: calc(100vw * 0.5625);
+    background-image: url({{ "/img/whitebg.svg" | relative_url }});
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+h1, h2, h3, p {
+    margin: 0;
+    font-size: 3rem;
+}
