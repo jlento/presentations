@@ -16,38 +16,46 @@
 }
 
 :root {
-    --padding-top: 5%;
+    --padding-top: 7%;
     --padding-left: 10%;
-}
-html {
-    font-family: "Source Sans Pro", Helvetica, sans-serif;
-    line-height: 1.3;
 }
 
 body {
+    font-family: "Source Sans Pro", Helvetica, sans-serif;
+    line-height: 1.3;
+    font-weight: normal;
+    color: var(--csc-grey);
     background-color: #cacaca;
     margin: 0;
 }
 
+/*
+ * Slide container
+ *
+ * Fixed aspect ratio 16:9, fill viewport, center
+ */
 body > div {
-    margin: auto;
     width: 100vw;
     height: 100vh;
     max-width: calc(100vh / 0.5625);
     max-height: calc(100vw * 0.5625);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     background-image: url({{ "/img/whitebg.svg" | relative_url }});
     background-size: cover;
     background-repeat: no-repeat;
 }
 
-body > div > div.title-slide {
+.title-slide {
     width: 100%;
     height: 100%;
     background-image: url({{ "/img/title-en.jpg" | relative_url }});
-    background-size: contain;
+    background-size: cover;
 }
 
-div.title-box {
+.title-box {
     width: 65%;
     height: 38%;
     padding-top: 20%;
@@ -57,13 +65,15 @@ div.title-box {
     align-items: center;
 }
 
-h1, h2, h3 {
+.title-box div * {
     margin: 0;
+    padding: 0;
 }
 
-body > div > h1 {
+h1 {
     display: block;
     height: 30%;
+    margin: 0;
     padding-left: var(--padding-left);
     background-color: var(--csc-magenta);
     display: flex;
@@ -71,4 +81,23 @@ body > div > h1 {
     font-size: 2rem;
     letter-spacing: 0.1rem;
     color: white;
+}
+
+h2, h3 {
+    margin-top: var(--padding-top);
+}
+
+h2, h3, p, el, ul {
+    margin-left: var(--padding-left);
+    margin-right: var(--padding-left);
+}
+
+h2 {
+    color: var(--csc-teal);
+    font-size: 1.2rem;
+}
+
+img {
+    max-height: 18rem;
+    max-width: 95%;
 }
