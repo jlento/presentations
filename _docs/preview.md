@@ -11,7 +11,7 @@ https://help.github.com/articles/setting-up-your-github-pages-site-locally-with-
 After having fresh ruby and bundler installed, it's basically
 
 ```
-git clone --recurse-submodules https://github.com/jlento/presentations.git
+git clone https://github.com/jlento/presentations.git
 cd presentations/
 bundle install
 bundle exec jekyll serve &
