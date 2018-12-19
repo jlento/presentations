@@ -102,6 +102,7 @@ Some pointers:
 
 - https://help.github.com/categories/setup/
 - https://github.com/joshnh/Git-Commands
+- http://rogerdudler.github.io/git-guide/
 
 There's plenty more good docs in the internet. Collect you own set!
 
