@@ -101,3 +101,11 @@ img {
     max-height: 18rem;
     max-width: 95%;
 }
+
+a {
+    color: var(--csc-magenta);
+}
+
+a:hover {
+    color: var(--csc-purple);
+}

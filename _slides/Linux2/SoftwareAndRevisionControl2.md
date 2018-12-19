@@ -35,9 +35,9 @@ What was it like before revision control, Git and remote repositories?
 Tarballs and directories with files in some state scattered in mailboxes
 and in various machines and user accounts?
 
-\* https://github.com  
-\*\* https://bitbucket.org  
-\*\*\* https://version.helsinki.fi
+\* <https://github.com>  
+\*\* <https://bitbucket.org>  
+\*\*\* <https://version.helsinki.fi>
 
 
 ## What to put into a source repository?
@@ -72,7 +72,7 @@ What git command
 A bonus exercise: commands that move files to opposite directions?
 
 
-\* https://git-scm.com/book/en/v2/Getting-Started-Git-Basics
+\* <https://git-scm.com/book/en/v2/Getting-Started-Git-Basics>
 
 
 ## The Three Stages
@@ -88,7 +88,7 @@ Let's just dive into it!
 - *fork* this *upstream repository*
 - *clone* your forked remote repository into a local one
 
-https://help.github.com
+<https://help.github.com>
 
 
 ## Config and Branches
@@ -100,9 +100,9 @@ Some first things to try:
 
 Some pointers:
 
-- https://help.github.com/categories/setup/
-- https://github.com/joshnh/Git-Commands
-- http://rogerdudler.github.io/git-guide/
+- <https://help.github.com/categories/setup>
+- <https://github.com/joshnh/Git-Commands>
+- <http://rogerdudler.github.io/git-guide>
 
 There's plenty more good docs in the internet. Collect you own set!
 
@@ -134,5 +134,5 @@ Test: What is the difference between *pull* and *fetch*?
 
 <br>
 
-\* https://coderefinery.github.io/git-intro/  
-\*\* https://coderefinery.org/workshops/2018-12-11-espoo/
+\* <https://coderefinery.github.io/git-intro>  
+\*\* <https://coderefinery.org/workshops/2018-12-11-espoo>
