@@ -12,7 +12,7 @@ defaults:
     scope:
       path: "_slides"
     values:
-      layout: "reveal-csc"
+      layout: "majestic"
   -
     scope:
       path: "_docs"

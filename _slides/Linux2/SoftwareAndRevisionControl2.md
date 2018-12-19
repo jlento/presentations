@@ -3,7 +3,6 @@ title: Linux 2 - Intermediate Linux
 author: Jaakko Leinonen, Juha Lento, Thomas Zwinger
 presentation-date: 2018-11-08
 titleslide: true
-layout: majestic
 ---
 
 # Software and revision control
