@@ -18,6 +18,50 @@
 :root {
     --padding-top: 7%;
     --padding-left: 10%;
+    --print-font-size: 3.84mm;
+    /* --screen-font-size computed in majestic.js */
+}
+
+@page {
+    size: 192mm 108mm;
+}
+
+@media screen {
+    :root {
+        font-size: var(--screen-font-size);
+    }
+    .slide {
+        width: 100vw;
+        height: 100vh;
+        max-width: calc(100vh / 0.5625);
+        max-height: calc(100vw * 0.5625);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+@media print {
+    :root {
+        font-size: var(--print-font-size);
+    }
+    .slide {
+        width: 192mm;
+        height: 108mm;
+        margin: 0;
+        font-size: var(--print-font-size) !important;
+        display: block !important;
+        position: static;
+        transform: none !important;
+        overflow: hidden;
+    }
+}
+
+.slide {
+    background-image: url({{ "/img/whitebg.svg" | relative_url }});
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 body {
@@ -29,25 +73,6 @@ body {
     margin: 0;
 }
 
-/*
- * Slide container
- *
- * Fixed aspect ratio 16:9, fill viewport, center
- */
-body > div {
-    width: 100vw;
-    height: 100vh;
-    max-width: calc(100vh / 0.5625);
-    max-height: calc(100vw * 0.5625);
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-image: url({{ "/img/whitebg.svg" | relative_url }});
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-
 .title-slide {
     width: 100%;
     height: 100%;
@@ -57,17 +82,16 @@ body > div {
 
 .title-box {
     width: 65%;
-    height: 38%;
-    padding-top: 20%;
-    padding-left: 28%;
+    height: 40%;
+    padding-top: 19%;
+    padding-left: 29%;
     color: white;
     display: flex;
     align-items: center;
 }
 
-.title-box div * {
-    margin: 0;
-    padding: 0;
+div.title {
+    font-size: 1.6rem;
 }
 
 h1 {
@@ -78,7 +102,7 @@ h1 {
     background-color: var(--csc-magenta);
     display: flex;
     align-items: center;
-    font-size: 2rem;
+    font-size: 1.5rem;
     letter-spacing: 0.1rem;
     color: white;
 }

@@ -1,8 +1,10 @@
-var currentSlide = 0;
+const splitBeforeTags = ["H1", "H2", "H3"];
+let currentSlide = 0;
 
 function resizeRem() {
-    document.documentElement.style.fontSize =
-        document.body.childNodes[currentSlide].offsetWidth/50 + "px";
+    document.documentElement.style.setProperty(
+        '--screen-font-size',
+        document.body.childNodes[currentSlide].offsetWidth/50 + "px");
 }
 
 function hide(element) {
@@ -13,19 +15,18 @@ function show(element) {
     element.style.display = "block";
 }
 
-function splitBefore(tag) {
-    return ["H1", "H2", "H3"]
-        .some(function(splitat){return splitat === tag;});
+function splitBefore(tag, tags) {
+    return tags.some(function(splitat){return splitat === tag;});
 }
 
-function init() {
-    var body = document.body;
-    var islide = currentSlide;
+function chop(body) {
+    let islide = currentSlide;
     body.insertBefore(document.createElement("div"),
                       body.childNodes[0]);
+    body.childNodes[0].className = "slide";
     hide(body.childNodes[0]);
     while (body.childNodes.length > islide + 1) {
-        if (splitBefore(body.childNodes[islide + 1].tagName)) {
+        if (splitBefore(body.childNodes[islide + 1].tagName, splitBeforeTags)) {
             body.insertBefore(body.childNodes[0].cloneNode(false),
                               body.childNodes[islide].nextSibling);
             islide++;
@@ -33,8 +34,13 @@ function init() {
         body.childNodes[islide]
             .appendChild(body.childNodes[islide + 1]);
     }
+}
+
+function init() {
+    var body = document.body;
+    chop(body);
     show(body);
-    show(body.childNodes[0]);
+    show(body.childNodes[currentSlide]);
     resizeRem();
 }
 
