@@ -24,6 +24,7 @@
 
 @page {
     size: 192mm 108mm;
+    margin: 0;
 }
 
 @media screen {
