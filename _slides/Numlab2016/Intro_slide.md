@@ -13,7 +13,7 @@ titleslide: t
 -  how to run OpenIFS in a supercomputer
 -  how to analyse the results
 
-**More /enjoyable/ and /productive/ working with computers**
+**More** *enjoyable* **and** *productive* **working with computers**
 
 ## Pre-requisites
 
@@ -67,11 +67,15 @@ Each compute node is a NUMA workstation.
 Parallel filesystem (Lustre) consists of a MetaData Server (MDS) and
 an array of large file servers (Object Data Server, ODS).
 
+## Parallel file system (cont.)
+
+**Keeping thing reasonable**
+
 - avoid excessive metadata access.
 - no more than 500 files in a single directory
 - single file size < 1GB
 
-## Compared to workstations
+## HPC environment vs. workstation
 
 1. multiple versions of software packages
 2. more complicated filesystem(s)

@@ -112,7 +112,7 @@ h2, h3 {
     margin-top: var(--padding-top);
 }
 
-h2, h3, p, el, ul {
+h2, h3, p, el, ul, ol, dl {
     margin-left: var(--padding-left);
     margin-right: var(--padding-left);
 }
