@@ -1,6 +1,8 @@
 ---
 title: NumLab 2016
 author: juha.lento@csc.fi
+presentation-date: Spring 2016
+titleslide: t
 ---
 
 # Bootstrap
@@ -16,16 +18,16 @@ author: juha.lento@csc.fi
 ## Pre-requisites
 
 -  general Linux command line skills, working with the directory
-   hierarchy and files, editing text files with =vi= or =emacs=.
--  user account in =taito.csc.fi=
+   hierarchy and files, editing text files with `vi` or `emacs`.
+-  user account in `taito.csc.fi`
 -  no prior experience with supercomputers is required
 
 # Working with computers
 
 ## Golden rules
 
--  *KIS*, Keep It Simple
--  *DRY*, Don't Repeat Yourself
+-  **KIS**, Keep It Simple
+-  **DRY**, Don't Repeat Yourself
 
 ## Be a programmer, not a computer!
 
@@ -46,21 +48,21 @@ author: juha.lento@csc.fi
 
 ## Architecture
 
-[[file:SupercomputerArchitecture.svg]]
+![Cluster architecture](./SupercomputerArchitecture.svg "Juha's Incscape art")
 
-Typical contemporary supercomputers consist of /login nodes/,
-tightly interconnected /compute nodes/, and accompanying /parallel file
-system/.
+Typical contemporary supercomputers consist of *login nodes*,
+tightly interconnected *compute nodes*, and accompanying *parallel file
+system*.
 
 ## Compute node
 
-[[file:ComputeNode.svg]]
+![Compute node](./ComputeNode.svg "Juha's Incscape art")
 
 Each compute node is a NUMA workstation.
 
 ## Parallel file system
 
-[[file:ParallelFileSystem.svg]]
+![Parallel file system](./ParallelFileSystem.svg "Juha's Incscape art")
 
 Parallel filesystem (Lustre) consists of a MetaData Server (MDS) and
 an array of large file servers (Object Data Server, ODS).
@@ -83,8 +85,8 @@ an array of large file servers (Object Data Server, ODS).
 
 ## Further reading
 
--  [[http://en.wikipedia.org/wiki/Parallel_computing]]
--  [[https://research.csc.fi/csc-guide]]
--  [[https://research.csc.fi/taito-user-guide]]
+-  <http://en.wikipedia.org/wiki/Parallel_computing>
+-  <https://research.csc.fi/csc-guide>
+-  <https://research.csc.fi/taito-user-guide>
 
 # Questions?
