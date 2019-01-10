@@ -26,7 +26,7 @@ function chop(body) {
     body.childNodes[0].className = "slide";
     hide(body.childNodes[0]);
     while (body.childNodes.length > islide + 1) {
-        if (splitBefore(body.childNodes[islide + 1].tagName, splitBeforeTags)) {
+        if (splitBefore(body.childNodes[islide + 1].tagName, splitBeforeTags) && body.childNodes[islide].childNodes.length > 1) {
             body.insertBefore(body.childNodes[0].cloneNode(false),
                               body.childNodes[islide].nextSibling);
             islide++;
