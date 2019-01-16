@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+    {% if page.title %}
+    <title>{{ page.title }}</title>
+    {% endif %}
+
+    {% if page.author %}
+    <meta name="author" content="{{ page.author }}" />
+    {% endif %}
+
+    {% if page.description %}
+    <meta name="description" content="{{ page.description }}" />
+    {% endif %}
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style"
+          content="black-translucent" />
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0,
+                maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+    {% if page.reveal-theme %}
+    {% capture reveal-theme-css %}/reveal.js/css/theme/{{ page.reveal-theme }}.css{% endcapture %}
+    {% else %}
+    {% assign reveal-theme-css = "/reveal.js/css/theme/simple.css" %}
+    {% endif %}
+
+    <link rel="stylesheet"
+          href="{{ "/reveal.js/css/reveal.css" | relative_url }}"/>
+    <link rel="stylesheet"
+          href="{{ reveal-theme-css | relative_url }}"
+          id="theme">
+
+    <!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet"
+          href="{{ "/reveal.js/lib/css/zenburn.css" | relative_url }}">
+
+		<!-- Printing and PDF exports -->
+		<script>
+		 var link = document.createElement( 'link' );
+		 link.rel = 'stylesheet';
+		 link.type = 'text/css';
+		 link.href = window.location.search.match( /print-pdf/gi ) ? '{{ "/reveal.js/css/print/pdf.css" | relative_url }}' : '{{ "/reveal.js/css/print/paper.css" | relative_url }}';
+		 document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		    <script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+
+	</head>
+
+	<body>
+
+		  <div class="reveal">
+			    <div class="slides">
+              <section data-markdown
+                       data-separator="^\n---\n$"
+                       data-separator-vertical="^\n--\n$"
+                       data-notes="^Note:">
+                  <textarea data-template>
+       {% include_relative {{ page.path | split: "/" | last }} %}
+                  </textarea>
+              </section>
+			    </div>
+		  </div>
+
+		  <script src="{{ "/reveal.js/lib/js/head.min.js" | relative_url }}"></script>
+		  <script src="{{ "/reveal.js/js/reveal.js" | relative_url }}"></script>
+
+		  <script>
+
+       // As a side effect, removes YAML front matter
+       function hasMarkdownSource() {
+           let mdblock = document.querySelector( '[data-template]' );
+           mdblock.innerHTML =
+               mdblock.innerHTML.replace(/^ *---\n[^]*?\n---\n/, '');
+           console.log(mdblock.innerHTML);
+           return !!mdblock;
+       }
+
+			 // More info https://github.com/hakimel/reveal.js#configuration
+			 Reveal.initialize({
+				   controls: true,
+				   progress: true,
+				   history: true,
+				   center: true,
+
+				   transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				   // More info https://github.com/hakimel/reveal.js#dependencies
+				   dependencies: [
+					     { src: '{{ "/reveal.js/lib/js/classList.js" | relative_url }}', condition: function() { return !document.body.classList; } },
+					     { src: '{{ "reveal.js/plugin/markdown/marked.js" | relative_url }}', condition: hasMarkdownSource },
+					     { src: '{{ "reveal.js/plugin/markdown/markdown.js" | relative_url }}', condition: hasMarkdownSource },
+					     { src: '{{ "reveal.js/plugin/highlight/highlight.js" | relative_url }}', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					     { src: '{{ "reveal.js/plugin/search/search.js" | relative_url }}', async: true },
+					     { src: '{{ "reveal.js/plugin/zoom-js/zoom.js" | relative_url }}', async: true },
+					     { src: '{{ "reveal.js/plugin/notes/notes.js" | relative_url }}', async: true },
+               { src: '{{ "reveal.js/plugin/math/math.js" | relative_url }}', async: true }
+				   ]
+			 });
+
+		  </script>
+
+	</body>
+</html>

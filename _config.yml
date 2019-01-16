@@ -18,4 +18,3 @@ defaults:
       path: "_docs"
     values:
       layout: "default"
-
