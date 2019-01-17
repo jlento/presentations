@@ -1,8 +1,8 @@
 ---
 title: Supercomputers @ CSC
 author: juha.lento@csc.fi
-layout: reveal
 presentation-date: 2019-01-21
+layout: reveal
 reveal-theme: simple
 ---
 
@@ -25,7 +25,21 @@ reveal-theme: simple
 
 --
 
+### Course: Using CSC Environment Efficiently
+
+The material in this lecture is covered in more detail in a whole day course
+["Using CSC Environment
+Efficiently"](https://www.csc.fi/web/training/-/csc-env-2019-1).
+
+--
+
 ### How to read this
+
+Usually the author fails to go through all the slides...but the (living) document is available on-line!
+
+<https://bit.ly/2DetCEC>
+
+Hit `ESC` key to see the layout, new topics go horisontally, deeper stuff is...downwards :)
 
 ---
 
@@ -180,7 +194,7 @@ Pleasant experience requires couple of tweaks...
 
 ## What you need to know use a supercomputer?
 
-Login nodes are Linux workstations, so, general Linux command line skills:
+General Linux command line skills (which you can learn in CSC's courses "Linux 1-3"):
 
 - working with the directory hierarchy and files
 - editing text files with `nano`, `vi` or `emacs`
@@ -190,12 +204,7 @@ Plus the supercomputer specifics...
 
 --
 
-###
-## How to run programs, batch jobs, interactive nodes?
-
-- Software environment (modules)
-
-## HPC environment vs. workstation
+### Supercomputer environment vs. regular workstation
 
 1. multiple versions of software packages
 2. more complicated filesystem(s)
@@ -203,13 +212,24 @@ Plus the supercomputer specifics...
 
 ---
 
+## How to run programs, batch jobs, interactive nodes?
+
+- Software environment (modules)
+
+
+---
+
 ## CSC's documentation, Google keywords
 
-All that I have covered, and \*some\* more, is in CSC documentation:
+All that I have covered, and \*some\* more, is in CSC on-line documentation and
+webinars.
 
-- 
+A good first guess is often found by
 
-A good first guess is often found by Google search "CSC ..." 
+<form method="get" action="https://www.google.com/search" target="_blank_">
+Google: <input style="color: blue; font-size: 100%; border: medium solid gray; border-radius: 0.3em;" type="text" name="q" size="31" value="CSC + software or discipline or..."></form>
+
+
 
 ---
 
