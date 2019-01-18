@@ -3,7 +3,7 @@ title: Supercomputers @ CSC
 author: juha.lento@csc.fi
 presentation-date: 2019-01-21
 layout: reveal
-reveal-theme: simple
+reveal-theme: sky
 ---
 
 ## Supercomputers @ CSC
@@ -55,7 +55,7 @@ Parallel file systems run on clusters of file servers.
 
 --
 
-## Contemporary supercomputer architecture
+## Cluster architecture
 
 ![Cluster architecture](./SupercomputerArchitecture.svg "Juha's Incscape art")
 
@@ -68,8 +68,8 @@ Parallel file systems run on clusters of file servers.
 
 ![Compute node](./ComputeNode.svg "Juha's Incscape art")
 
-Each compute node is a small (NUMA) parallel machine with multiple cores...like
-your smart phone or laptop!
+Compute nodes are parallel computers with multiple cores... like your smart
+phone or laptop!
 
 --
 
@@ -94,10 +94,9 @@ an array of large file servers (Object Data Server, ODS).
 
 ## When to use a supercomputer
 
-- need for large CPU and GPU resources  
+- need for large CPU and GPU resources
   *and a program that can use them*
-    - Parallel computing, massively parallel  
-       programs (MPP)
+    - parallel MPI programs
     - farming calculations, parameter searches etc.
 - sharing large data sets
 - sharing hard to install programs
@@ -106,7 +105,7 @@ an array of large file servers (Object Data Server, ODS).
 
 ## When not to use a supercomputer
 
-- when doing code development (in most cases)
+- code development, in most cases
 
 Weight the added complexity of supercomputer environment vs. the
 increase in resources.
@@ -155,7 +154,6 @@ and
 
 <https://research.csc.fi/csc-guide-connecting-the-servers-of-csc>
 
-- https://sui.csc.fi, for account and project management
 - ssh, for simple tasks
 - NoMachine remote desktop, for GUI and real work
 
@@ -177,12 +175,11 @@ Pleasant experience requires couple of tweaks...
 
 ### NoMachine tips (cont.)
 
-- Use the very basic default terminal only to launch Gnome terminal(s) with easy customization, like font size, etc.  
+- Use the very basic default terminal only to launch Gnome terminal(s) with easy customization, like font size, etc.
   ```bash
   gnome-terminal &
   ```
-- Finding out how cut'n'paste between desktop and host works can be difficult,
-  but it is doable
+- cut'n'paste between desktop and host works... when you find the right keys...
 
 --
 
@@ -192,9 +189,9 @@ Pleasant experience requires couple of tweaks...
 
 ---
 
-## What you need to know use a supercomputer?
+## Supercomputing skills
 
-General Linux command line skills (which you can learn in CSC's courses "Linux 1-3"):
+Linux command line skills (which you can learn in CSC's courses "Linux 1-3"):
 
 - working with the directory hierarchy and files
 - editing text files with `nano`, `vi` or `emacs`
@@ -212,10 +209,79 @@ Plus the supercomputer specifics...
 
 ---
 
-## How to run programs, batch jobs, interactive nodes?
+## How to run programs?
 
-- Software environment (modules)
+Computers have no common sense. They will execute every command you give, no
+matter how crazy. As a human, you need to know exactly what you are asking, and
+exercise your common sense.
 
+There are quite a few important concepts...
+
+--
+
+### Environment modules
+
+**What and why**: Most programs, *dynamically linked* ones, need to find the
+same libraries at the executable *build time* and at the *run time*. Currently
+this relies on the environment variable `LD_LIBRARY_PATH`. (Try `ldd` command!)
+
+**How**: Set the same shell environment at build and at run time with
+*environment modules*.
+
+There are other uses for environment modules, too.
+
+--
+
+### What to run on a login node?
+
+You can build executables, run small programs, pre- and post-process data,
+visualize data, move data, etc. on **login nodes**, as long as it does not
+affect other users on the same login node. Try `top` command!
+
+--
+
+### What to run on interactive compute nodes (taito-shell)?
+
+Use `taito-shell` for longer interactive typeish tasks.
+
+Note: `taito-shell` is just a compute node. It's local system tools are not necessary 100% same as in the login node.
+
+--
+
+### What to run on compute nodes?
+
+- all heavier production calculations, whether massively parallel or farming
+  type
+
+The compute nodes are accessed through *batch queue system*.
+
+---
+
+## Batch queue system
+
+Batch queue system allocates resources for your calculation from the compute
+nodes according to your *batch job script*, and launces it when resources are
+available. See command `sbatch`.
+
+Batch queue system tries to pack everybody's requests into the compute nodes as
+efficiently and fairly as possible.
+
+--
+
+### Using multiple cores for parameter searches and other farming calculations
+
+Use [*Array jobs*](https://research.csc.fi/taito-array-jobs) for farming type
+calculations.
+
+[![Array jobs](https://i.ytimg.com/vi/EqUKIPSlvW8/hqdefault.jpg?sqp=-oaymwEjCPYBEIoBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLAziT6GwUoHWXHbpBr4en4wBKKi4g)](https://www.youtube.com/watch?v=EqUKIPSlvW8)
+
+--
+
+### Using multiple cores with MPI parallel program
+
+Batch job script is executed only on the first reserved CPU core. Use command
+`srun` in the script to spawn the executable, usually a MPI parallel program, on
+all the reserved CPU cores.
 
 ---
 
@@ -229,7 +295,15 @@ A good first guess is often found by
 <form method="get" action="https://www.google.com/search" target="_blank_">
 Google: <input style="color: blue; font-size: 100%; border: medium solid gray; border-radius: 0.3em;" type="text" name="q" size="31" value="CSC + software or discipline or..."></form>
 
+--
 
+### Some Google searches examples
+
+- "csc environment guide", 1st hit: <https://research.csc.fi/csc-guide>
+- "csc taito guide", 1st hit: <https://research.csc.fi/taito-user-guide>
+- "csc courses", 2nd hit: <https://research.csc.fi/courses>
+- "csc youtube", 1st hit: <https://www.youtube.com/channel/UCFv-76jNZlBFp6O9umdnyDA>
+- "csc customer portal", 2nd hit: <https://sui.csc.fi>
 
 ---
 
