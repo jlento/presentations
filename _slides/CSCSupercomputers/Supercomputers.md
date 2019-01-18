@@ -18,7 +18,7 @@ reveal-theme: sky
 - When to use a supercomputer?
 - How to apply CSC resources?
 - How to login?
-- What you need to know use a supercomputer?
+- What you need to know to use a supercomputer?
 - How to run programs?
 - Software environment
 - CSC's documentation, Google keywords
@@ -97,7 +97,8 @@ an array of large file servers (Object Data Server, ODS).
 - need for large CPU and GPU resources
   *and a program that can use them*
     - parallel MPI programs
-    - farming calculations, parameter searches etc.
+    - farming calculations, i.e. running the same program on different inputs,
+      such as parameter searches
 - sharing large data sets
 - sharing hard to install programs
 
@@ -282,6 +283,18 @@ calculations.
 Batch job script is executed only on the first reserved CPU core. Use command
 `srun` in the script to spawn the executable, usually a MPI parallel program, on
 all the reserved CPU cores.
+
+```bash
+#!/bin/bash
+#SBATCH -p parallel
+#SBATCH -n 16
+#SBATCH -t 3600
+
+module load hugs flowers
+
+cd $WRKDIR/topsecret
+srun worlddomination
+```
 
 ---
 
