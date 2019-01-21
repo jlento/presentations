@@ -216,7 +216,8 @@ Computers have no common sense. They will execute every command you give, no
 matter how crazy. As a human, you need to know exactly what you are asking, and
 exercise your common sense.
 
-There are quite a few important concepts...
+There are quite a few important concepts, such as a *process* and a *thread*,
+andxs...
 
 --
 
@@ -255,6 +256,70 @@ Note: `taito-shell` is just a compute node. It's local system tools are not nece
   type
 
 The compute nodes are accessed through *batch queue system*.
+
+---
+
+## Parallel computing
+
+Three kinds of parallelism:
+
+- Farming
+- Thread parallelism
+- Message passing, MPI
+
+You can test and use all three of these approaches in you workstation or laptop.
+Supercomputers are needed when you scale up the problem size.
+
+And all three can be combined, too.
+
+--
+
+### Farming
+
+Independent processes run in parallel, usually running the same program on
+different inputs, such as, image analysis frame by frame, parameter searches,
+etc.
+
+- may run in multiple different compute nodes
+- often uses separate steps to collect and analyze the results from the
+  individual runs
+- lot's of intermediate files
+
+
+--
+
+### Thread parallelism
+
+Thread parallel programs can use multiple treads within a process to utilize
+multiple cores.
+
+- works within a workstation / compute node, only
+- often built into the executable with OpenMP compiler directives
+- often use environment variable OMP_NUM_THREADS to control the number of
+  threads to launch
+
+--
+
+### MPI parallelism
+
+Multiple processes, possibly in different compute nodes, are launched
+simultaneously, and communicate by exchanging messages.
+
+- requires a separate program that launches the processes, called `srun`
+  (taito.csc.fi), `mpirun` or `mpiexec` (regular workstations and laptops),
+  `aprun` (sisu.csc.fi)
+- is integrated with the batch queue system
+
+--
+
+### Scaling
+
+Parallelel computing has an overhead, always. It may come from I/O, message
+passing, cache misses, etc. See [Amdahl's
+law](https://en.wikipedia.org/wiki/Amdahl%27s_law), for example.
+
+The important advice to remember, is to always make sure that the parallel
+calculation actually is faster, and using the resources efficiently.
 
 ---
 
