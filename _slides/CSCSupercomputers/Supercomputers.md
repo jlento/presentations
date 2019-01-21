@@ -184,7 +184,7 @@ Pleasant experience requires couple of tweaks...
 
 --
 
-### Webinar:Running RStudio using NoMachine
+### Webinar: Running RStudio using NoMachine
 
 [![Webinar: How to run command R in Nomachine](https://i.ytimg.com/vi/qdaqAFskrB8/hqdefault.jpg?sqp=-oaymwEjCPYBEIoBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLCkzfyFFCTAnqZeOSXojaceIC46Qw)](https://www.youtube.com/watch?v=qdaqAFskrB8)
 
@@ -375,7 +375,7 @@ Google: <input style="color: blue; font-size: 100%; border: medium solid gray; b
 
 --
 
-### Some Google searches examples
+### Some Google search examples
 
 - "csc environment guide", 1st hit: <https://research.csc.fi/csc-guide>
 - "csc taito guide", 1st hit: <https://research.csc.fi/taito-user-guide>
