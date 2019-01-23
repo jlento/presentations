@@ -217,7 +217,7 @@ matter how crazy. As a human, you need to know exactly what you are asking, and
 exercise your common sense.
 
 There are quite a few important concepts, such as a *process* and a *thread*,
-andxs...
+and...
 
 --
 
