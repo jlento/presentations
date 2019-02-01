@@ -3,6 +3,7 @@ title: NumLab 2016
 author: juha.lento@csc.fi
 presentation-date: Spring 2016
 titleslide: t
+layout: reveal
 ---
 
 # Bootstrap
