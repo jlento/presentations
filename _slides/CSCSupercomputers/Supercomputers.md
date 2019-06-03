@@ -64,6 +64,15 @@ Parallel file systems run on clusters of file servers.
 
 --
 
+## Login node
+
+A regular multi-user Linux workstation with
+
+- interface to compute nodes through batch queue system
+- custom software stack
+
+--
+
 ## Compute node
 
 ![Compute node](./ComputeNode.svg "Juha's Incscape art")
