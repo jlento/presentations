@@ -138,12 +138,12 @@ Power used, and `$C$` is the difficulty of the problem (...humour).
 ## How to apply CSC resources?
 
 1. Sign up, i.e. apply **CSC account**
-    - easy if you can identify with HAKA
+    - easy if you can authenticate with HAKA
 2. Join to a **computing project**, or apply a new one
 3. Apply for **resources** to your computing project
 
 All this stuff (and alike) is done in  
-<https://sui.csc.fi>.
+<https://my.csc.fi>.
 
 --
 
