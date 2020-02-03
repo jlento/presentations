@@ -2,11 +2,15 @@
 title: NumLab 2016
 author: juha.lento@csc.fi
 presentation-date: Spring 2016
-titleslide: t
 layout: reveal
+reveal-theme: sky
 ---
 
-# Bootstrap
+## NumLab 2016
+
+<juha.lento@csc.fi>
+
+--
 
 ## Learning outcomes
 
@@ -16,6 +20,8 @@ layout: reveal
 
 **More** *enjoyable* **and** *productive* **working with computers**
 
+--
+
 ## Pre-requisites
 
 -  general Linux command line skills, working with the directory
@@ -23,18 +29,26 @@ layout: reveal
 -  user account in `taito.csc.fi`
 -  no prior experience with supercomputers is required
 
+---
+
 # Working with computers
+
+--
 
 ## Golden rules
 
 -  **KIS**, Keep It Simple
 -  **DRY**, Don't Repeat Yourself
 
+--
+
 ## Be a programmer, not a computer!
 
 - bash is interpreted language, exactly like python, for example
 - use bash like any other interpreted language, write programs
 - command line is bash's Read-Execute-Print-Loop (REPL)
+
+--
 
 ## Automate and evolve
 
@@ -45,7 +59,11 @@ layout: reveal
   manually
 - be efficient with editors and command line
 
+---
+
 # Contemporary supercomputers
+
+--
 
 ## Architecture
 
@@ -55,11 +73,15 @@ Typical contemporary supercomputers consist of *login nodes*,
 tightly interconnected *compute nodes*, and accompanying *parallel file
 system*.
 
+--
+
 ## Compute node
 
 ![Compute node](./ComputeNode.svg "Juha's Incscape art")
 
 Each compute node is a NUMA workstation.
+
+--
 
 ## Parallel file system
 
@@ -67,6 +89,8 @@ Each compute node is a NUMA workstation.
 
 Parallel filesystem (Lustre) consists of a MetaData Server (MDS) and
 an array of large file servers (Object Data Server, ODS).
+
+--
 
 ## Parallel file system (cont.)
 
@@ -76,11 +100,15 @@ an array of large file servers (Object Data Server, ODS).
 - no more than 500 files in a single directory
 - single file size < 1GB
 
+--
+
 ## HPC environment vs. workstation
 
 1. multiple versions of software packages
 2. more complicated filesystem(s)
 3. batch queue system
+
+--
 
 ## Use supers for
 
@@ -88,10 +116,14 @@ an array of large file servers (Object Data Server, ODS).
 -  farming calculations, parameter searches etc.
 -  large data sets
 
+--
+
 ## Further reading
 
 -  <http://en.wikipedia.org/wiki/Parallel_computing>
 -  <https://research.csc.fi/csc-guide>
 -  <https://research.csc.fi/taito-user-guide>
+
+---
 
 # Questions?
