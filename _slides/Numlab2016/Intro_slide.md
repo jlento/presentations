@@ -12,7 +12,7 @@ reveal-theme: sky
 
 --
 
-## Learning outcomes
+### Learning outcomes
 
 -  how to build OpenIFS from source
 -  how to run OpenIFS in a supercomputer
@@ -22,7 +22,7 @@ reveal-theme: sky
 
 --
 
-## Pre-requisites
+### Pre-requisites
 
 -  general Linux command line skills, working with the directory
    hierarchy and files, editing text files with `vi` or `emacs`.
@@ -31,18 +31,18 @@ reveal-theme: sky
 
 ---
 
-# Working with computers
+## Working with computers
 
 --
 
-## Golden rules
+### Golden rules
 
 -  **KIS**, Keep It Simple
 -  **DRY**, Don't Repeat Yourself
 
 --
 
-## Be a programmer, not a computer!
+### Be a programmer, not a computer!
 
 - bash is interpreted language, exactly like python, for example
 - use bash like any other interpreted language, write programs
@@ -50,7 +50,7 @@ reveal-theme: sky
 
 --
 
-## Automate and evolve
+### Automate and evolve
 
 - write tasks that you need to repeat or later review as programs
 - re-use code, write re-usable code
@@ -61,11 +61,11 @@ reveal-theme: sky
 
 ---
 
-# Contemporary supercomputers
+## Contemporary supercomputers
 
 --
 
-## Architecture
+### Architecture
 
 ![Cluster architecture](./SupercomputerArchitecture.svg "Juha's Incscape art")
 
@@ -75,7 +75,7 @@ system*.
 
 --
 
-## Compute node
+### Compute node
 
 ![Compute node](./ComputeNode.svg "Juha's Incscape art")
 
@@ -83,7 +83,7 @@ Each compute node is a NUMA workstation.
 
 --
 
-## Parallel file system
+### Parallel file system
 
 ![Parallel file system](./ParallelFileSystem.svg "Juha's Incscape art")
 
@@ -92,7 +92,7 @@ an array of large file servers (Object Data Server, ODS).
 
 --
 
-## Parallel file system (cont.)
+### Parallel file system (cont.)
 
 **Keeping thing reasonable**
 
@@ -102,7 +102,7 @@ an array of large file servers (Object Data Server, ODS).
 
 --
 
-## HPC environment vs. workstation
+### HPC environment vs. workstation
 
 1. multiple versions of software packages
 2. more complicated filesystem(s)
@@ -110,7 +110,7 @@ an array of large file servers (Object Data Server, ODS).
 
 --
 
-## Use supers for
+### Use supers for
 
 -  Parallel computing, massively parallel programs (MPP)
 -  farming calculations, parameter searches etc.
@@ -118,7 +118,7 @@ an array of large file servers (Object Data Server, ODS).
 
 --
 
-## Further reading
+### Further reading
 
 -  <http://en.wikipedia.org/wiki/Parallel_computing>
 -  <https://research.csc.fi/csc-guide>
@@ -126,4 +126,4 @@ an array of large file servers (Object Data Server, ODS).
 
 ---
 
-# Questions?
+## Questions?
