@@ -44,19 +44,38 @@ function init() {
     resizeRem();
 }
 
-function change(event) {
+function previous() {
     var body = document.body;
-    var key = event.charCode || event.keyCode;
-    if ((key === 37 || key === 38) &&
-        body.childNodes[currentSlide].previousSibling) {
-        hide(body.childNodes[currentSlide]);
-        currentSlide--;
-        show(body.childNodes[currentSlide]);
+    if (body.childNodes[currentSlide].previousSibling) {
+	hide(body.childNodes[currentSlide]);
+	currentSlide--;
+	show(body.childNodes[currentSlide]);
     }
-    if ((key === 39 || key === 40) &&
-        body.childNodes[currentSlide].nextSibling) {
-        hide(body.childNodes[currentSlide]);
-        currentSlide++;
-        show(body.childNodes[currentSlide]);
+}
+
+function next() {
+    var body = document.body;
+    if (body.childNodes[currentSlide].nextSibling) {
+	hide(body.childNodes[currentSlide]);
+	currentSlide++;
+	show(body.childNodes[currentSlide]);
+    }
+}
+
+function keypress(event) {
+    var key = event.charCode || event.keyCode;
+    if (key === 37 || key === 38) {
+        previous();
+    }
+    if (key === 39 || key === 40) {
+	next();
+    }
+}
+
+function mouseclick(event) {
+    if ((event.clientX - document.body.clientWidth / 2) < 0) {
+	previous();
+    } else {
+	next();
     }
 }
