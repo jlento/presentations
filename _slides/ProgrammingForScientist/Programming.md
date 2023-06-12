@@ -12,6 +12,8 @@ programming and mathematics. It took way too long for him to realise that if
 approached with the same curiosity as he had with physics, learning mathematics
 and programming can blow his mind equally well.
 
+Haskell & C
+
 
 ## Communication
 
@@ -59,7 +61,7 @@ what should be easily readable from the main program?
 - Minimize branching in the code. Use `#ifdef`s sparingly, preferrably not at all.
 - Avoid optional features. If you can compile a program with or without a
   feature, it's two different programs. This is especially true for libraries,
-  they should have *zero* optional features.
+  they should have *zero* optional features (combinatorial explosion).
 - If you even think that you need anything on top of cmake or GNU autoconf, you
   need to clean your code. (Package managers are a different thing, use existing
   ones, do not write your own)
