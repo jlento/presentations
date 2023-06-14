@@ -65,6 +65,8 @@ what should be easily readable from the main program?
 - If you even think that you need anything on top of cmake or GNU autoconf, you
   need to clean your code. (Package managers are a different thing, use existing
   ones, do not write your own)
+- SPMD programming model is already hard, MPMD is insanely hard (complexity,
+  debugging, load balancing, etc).
 
 
 ## Small iffy example
