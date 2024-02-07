@@ -38,7 +38,7 @@ make great bread even when the recipe needs tuning.
 
 ## Menu
 
-- How supercomputer (clusters) work, how they differ from Linux desktops?
+- How supercomputers (clusters) work, how they differ from Linux desktops?
 - Batch system and batch scripts
 - Programming, a simple abstraction
 
@@ -108,12 +108,13 @@ an array of large file servers (Object Data Server, ODS).
 - Operating system consists of the kernel and "other stuff"
   in system directories `/usr`, `/etc`, and so on.
 
+--
 
 ### Further reading
 
 -  <http://docs.csc.fi>
 
---
+---
 
 ## Batch system and batch job scripts
 
@@ -121,7 +122,7 @@ Here we improvise, and look at the scripts you use in NumLab course!
 
 - What is a process and what is a thread?
 
---
+---
 
 ## Programming
 
@@ -152,6 +153,6 @@ values, group them into composite datatypes. For example, instead of
 `par1`, `par2`, ..., have datatype `parameters`, that contains all the
 individual ones.
 
---
+---
 
 ## Questions?
