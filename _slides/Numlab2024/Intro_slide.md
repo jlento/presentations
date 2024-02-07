@@ -79,9 +79,9 @@ an array of large file servers (Object Data Server, ODS).
 
 **Keeping thing reasonable**
 
-- avoid excessive metadata access.
+- avoid excessive metadata access, i.e. opening and closing files, etc.
 - no more than 500 files in a single directory
-- single file size < 1GB
+- single file size < 5GB
 
 --
 
@@ -101,6 +101,14 @@ an array of large file servers (Object Data Server, ODS).
 
 --
 
+### Containers
+
+- Used to deploy software with many dependencies
+- Role of Linux kernel, other processes and hardware
+- Operating system consists of the kernel and "other stuff"
+  in system directories `/usr`, `/etc`, and so on.
+
+
 ### Further reading
 
 -  <http://docs.csc.fi>
@@ -110,6 +118,8 @@ an array of large file servers (Object Data Server, ODS).
 ## Batch system and batch job scripts
 
 Here we improvise, and look at the scripts you use in NumLab course!
+
+- What is a process and what is a thread?
 
 --
 
