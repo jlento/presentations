@@ -11,7 +11,7 @@ Different storages have different purposes, and are meant for different kinds of
 No single storage is at the same time fast, cheap, large capacity, long lifetime,
 broadly accessible, etc.
 
-Old saying that supercomputers transfer a compute bound problem into a I/O problem
+Old saying that supercomputers transfer a compute bound problem into an I/O problem
 is more true now than ever. Still, the data management in many projects looks like an
 afterthought.
 
@@ -54,14 +54,15 @@ In the long run, I'd say the web interfaces are the way to go. We already have a
 pouta.csc.fi interfaces to the object storage, and "Cloud Storage Configuration" in puhti.csc.fi,
 mahti.csc.fi, and lumi.csc.fi. Object storages are web services, after all.
 
-Meanwhile, in HPC we need to deal with command line tools.
+Meanwhile, in HPC we often still need to deal with command line tools.
 
 ## Data-mover
 
-Data-mover is a development idea/project, that tries to solve the acute problem of Puhti disc being way too
-full, by providing an easy to use tool to transfer problematic datasets to Allas. It does this by using
-restic and batch jobs. Unfortunately, while the tool solves some problems, it also creates new ones.
+Data-mover is a development idea/project, that tries to solve the acute problem of Puhti scratch disc
+being way too full, by providing an easy to use tool to transfer problematic datasets to Allas. It
+does this by using restic and batch jobs. Unfortunately, while the tool solves some problems, it
+also creates new ones.
 
 I'd say the correct solution was already on the first slide of this set, plan the data management already
-when writeing the application and the workflow, and do not create difficult datasets (too many small
-files, huge files) in the first place.
+when writing the application and the workflow, and do not create difficult datasets (too many small
+files, huge files, etc.) in the first place.
