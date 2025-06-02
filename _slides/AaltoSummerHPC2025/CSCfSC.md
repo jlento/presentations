@@ -20,6 +20,10 @@ finnish universities, polytechnics and research institutes.
 - Computing project
 - HPC services/resources
 
+## HPC cluster architecture
+
+![Juha's art](https://raw.githubusercontent.com/jlento/presentations/refs/heads/master/_slides/CSCSupercomputers/SupercomputerArchitecture.svg)
+
 ## Where to find information
 
 - What CSC is: www.csc.fi
@@ -27,3 +31,5 @@ finnish universities, polytechnics and research institutes.
 - How to use the services: docs.csc.fi
 - Your colleagues and supervisors
 - servicedesk@csc.fi
+
+## Demo
