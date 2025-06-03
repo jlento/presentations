@@ -31,6 +31,11 @@ finnish universities, polytechnics and research institutes.
 - parallel file system
 - data management
 
+## Advice
+
+- Keep it simple
+- Ask for help
+
 ## Where to find information
 
 - What CSC is: www.csc.fi
