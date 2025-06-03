@@ -24,6 +24,13 @@ finnish universities, polytechnics and research institutes.
 
 ![Juha's art](https://raw.githubusercontent.com/jlento/presentations/refs/heads/master/_slides/CSCSupercomputers/SupercomputerArchitecture.svg)
 
+## Supercomputer extras
+
+- batch queue system
+- software tree
+- parallel file system
+- data management
+
 ## Where to find information
 
 - What CSC is: www.csc.fi
