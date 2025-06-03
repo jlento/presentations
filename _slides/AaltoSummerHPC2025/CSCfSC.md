@@ -30,6 +30,7 @@ finnish universities, polytechnics and research institutes.
 - software tree
 - parallel file system
 - data management
+- command line and text editor
 
 ## Advice
 
